@@ -24,6 +24,4 @@ O fluxo de uso da aplicação será o seguinte:
 
 ## 🛠️ Tecnologias
 
-A arquitetura e as tecnologias do projeto ainda estão em fase de planejamento. No entanto, a stack provável incluirá:
-
   - Frontend: HTML5, CSS3, JavaScript, TypeScript
