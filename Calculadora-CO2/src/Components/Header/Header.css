@@ -1,0 +1,23 @@
+:root {
+  --eco-green: #2d7a5f;
+  --eco-green-light: #4a9d7f;
+  --border-color: #d1e4dc;
+}
+
+.app-header {
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.btn-primary-green {
+  background-color: var(--eco-green);
+  border-color: var(--eco-green);
+}
+
+.btn-primary-green:hover{
+    background-color: var(--eco-green-light) !important
+}

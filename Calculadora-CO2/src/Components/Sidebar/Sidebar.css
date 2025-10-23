@@ -1,0 +1,76 @@
+:root {
+    --eco-green: #2d7a5f;
+    --eco-green-lighter: #e8f5f0;
+
+    --text-primary: #1a3a2e;
+    --text-muted: #5f7d73;
+
+    --border-color: #d1e4dc;
+}
+
+.sidebar {
+  background-color: var(--card-bg);
+  height: 100%;
+  border-right: 1px solid var(--border-color);
+  transition: transform 0.3s ease-in-out;
+}
+
+.sidebar-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.sidebar-content {
+  padding: 1rem 0;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-menu-item {
+  margin: 0.25rem 0.5rem;
+}
+
+.sidebar-menu-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s;
+}
+
+.sidebar-menu-link:hover {
+  background-color: var(--eco-green-lighter);
+  color: var(--text-primary);
+}
+
+.sidebar-menu-link.active {
+  background-color: var(--eco-green);
+  color: white;
+}
+
+.bg-eco-green {
+  background-color: var(--eco-green);
+}
+
+.icon-square {
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-muted-green {
+  color: var(--text-muted) !important;
+}

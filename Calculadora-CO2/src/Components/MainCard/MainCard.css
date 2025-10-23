@@ -1,0 +1,26 @@
+.main-card {
+    border: 2px solid #d1e4dc;
+    background-image: linear-gradient(to bottom right, #ffffff, #f4f9f6);
+}
+
+.card-title{
+    color: #5f7d73;
+}
+
+.text-eco-green{
+    font-size: 3rem;
+    color:#2d7a5f
+}
+
+.text-green-info{
+    font-size: 1.5rem;
+    color: #5f7d73;
+}
+
+.green-line{
+    color: #2d7a5f;
+}
+
+.text-description{
+    color: #5f7d73;
+}

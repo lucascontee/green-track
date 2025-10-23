@@ -1,0 +1,44 @@
+:root {
+  --eco-green: #2d7a5f;
+  --eco-green-light: #4a9d7f;
+  --eco-green-lighter: #e8f5f0;
+  --eco-blue: #3b82f6;
+  --eco-blue-light: #60a5fa;
+  --eco-warning: #f59e0b;
+  --eco-warning-light: #fef3c7;
+  
+  --background-color: #f8faf9;
+  --card-bg: #ffffff;
+  
+  --text-primary: #1a3a2e;
+  --text-muted: #5f7d73;
+  
+  --border-color: #d1e4dc;
+  --border-warning-color: #f7ecd7;
+}
+
+.card-eco {
+  border: 2px solid var(--border-warning-color) !important;
+}
+
+.card-eco-gradient-warning {
+  background: linear-gradient(135deg, #ffffff 0%, rgba(254, 243, 199, 0.5) 100%);
+}
+
+.text-eco-warning {
+  color: var(--eco-warning);
+}
+
+.text-muted-green {
+  color: var(--text-muted) !important;
+}
+
+.bg-eco-warning-light {
+  background-color: var(--eco-warning-light);
+}
+
+.badge-eco-warning {
+  background-color: var(--eco-warning-light);
+  color: var(--eco-warning) !important;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
