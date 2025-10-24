@@ -13,12 +13,12 @@ const menuItems = [
   {
     title: "Página principal",
     icon: FaHome,
-    url: "#home"
+    url: "home"
   },
   {
     title: "Calcular emissão",
     icon: FaCalculator,
-    url: "#calcular",
+    url: "calcular",
   },
   {
     title: "Cadastrar veículo",

@@ -1,4 +1,4 @@
-import { FaCalculator, FaBell } from "react-icons/fa";
+import { FaCalculator, FaRegBell } from "react-icons/fa";
 import { AiOutlineMenu } from "react-icons/ai";
 
 import "./Header.css"
@@ -28,13 +28,13 @@ export function Header({ onToggleSidebar }: HeaderProps){
                         </div>
                     </div>
                 </div>
-              <div className="d-flex me-4 gap-2 align-items-center">
+              <div className="d-flex me-4 gap-4 align-items-center">
                 <button className=" text-white btn btn-primary-green d-none d-sm-flex align-items-center gap-2 shadow">
                   <FaCalculator size={20} />
                   Calcular Emissão
                 </button>
                 <div>
-                  <FaBell size={24} className="bell"/>
+                  <FaRegBell size={24} className="bell"/>
                 </div>
               </div>
             </div>
