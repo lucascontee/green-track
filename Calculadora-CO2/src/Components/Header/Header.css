@@ -14,10 +14,14 @@
 }
 
 .btn-primary-green {
-  background-color: var(--eco-green);
-  border-color: var(--eco-green);
+  background-color: var(--eco-green) !important;
+  border-color: var(--eco-green) !important;
 }
 
 .btn-primary-green:hover{
     background-color: var(--eco-green-light) !important
+}
+
+.bell{
+  color: var(--eco-green-light) !important;
 }

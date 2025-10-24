@@ -57,7 +57,9 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
               const Icon = item.icon;
               return (
                 <li key={item.title} className="sidebar-menu-item">
-                  <a href={item.url} className="sidebar-menu-link">
+                  <a href={item.url} 
+                      className="sidebar-menu-link"
+                      onClick={onClose}>
                     <Icon size={20} />
                     <span>{item.title}</span>
                   </a>

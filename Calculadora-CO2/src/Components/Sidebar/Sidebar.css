@@ -10,7 +10,6 @@
 
 .sidebar {
   background-color: var(--card-bg);
-  height: 100%;
   border-right: 1px solid var(--border-color);
   transition: transform 0.3s ease-in-out;
 }
