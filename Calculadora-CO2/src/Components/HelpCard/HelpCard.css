@@ -1,0 +1,32 @@
+:root {
+    --eco-green: #2d7a5f;
+    --eco-green-lighter: #e8f5f0;
+    --text-muted: #5f7d73;
+
+}
+
+.help-card{
+    border: 1px solid #d1e4dc !important;
+}
+
+.bg-eco-green-lighter {
+    background-color: var(--eco-green-lighter) !important;
+}
+
+.text-muted-green {
+    color: var(--text-muted) !important;
+}
+
+.text-eco-green {
+    color: var(--eco-green) !important;
+}
+
+.btn-outline-success {
+    color: var(--eco-green);
+    border-color: var(--eco-green);
+}
+
+.btn-outline-success:hover {
+    background-color: var(--eco-green);
+    border-color: var(--eco-green);
+}

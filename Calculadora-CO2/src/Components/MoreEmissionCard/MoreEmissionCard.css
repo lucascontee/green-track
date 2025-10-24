@@ -19,6 +19,7 @@
 
 .card-eco {
   border: 2px solid var(--border-warning-color) !important;
+  width: 33%;
 }
 
 .card-eco-gradient-warning {

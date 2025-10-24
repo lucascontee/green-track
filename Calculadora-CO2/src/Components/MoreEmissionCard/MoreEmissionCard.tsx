@@ -10,7 +10,7 @@ interface MoreEmissionCardProps {
 
 export function MoreEmissionCard({ transportMode, emissions }: MoreEmissionCardProps) {
   return (
-    <div className="shadow-sm rounded-4 w-50 card card-eco card-eco-gradient-warning">
+    <div className="shadow-sm rounded-4 card card-eco card-eco-gradient-warning">
       <div className="card-body p-4">
         <div className="d-flex align-items-center gap-2 mb-4">
           <FiAlertCircle  className="text-eco-warning" size={20} />
