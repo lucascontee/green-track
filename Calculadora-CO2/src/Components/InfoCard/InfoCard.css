@@ -1,0 +1,18 @@
+
+:root {
+    --eco-green: #2d7a5f;
+    --text-primary: #1a3a2e;
+    --text-muted: #5f7d73;
+}
+
+.info-card{
+    border: 1px solid #d1e4dc !important;
+}
+
+.text-muted-green{
+    color: var(--text-muted) !important;
+}
+
+.text-emitted{
+    color: var(--eco-green)
+}

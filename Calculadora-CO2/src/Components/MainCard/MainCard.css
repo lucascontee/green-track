@@ -1,4 +1,5 @@
 .main-card {
+    width: 68%;
     border: 2px solid #d1e4dc;
     background-image: linear-gradient(to bottom right, #ffffff, #f4f9f6);
 }
