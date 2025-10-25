@@ -1,4 +1,4 @@
-import { FaHome, FaCalculator, FaCar, FaHistory } from "react-icons/fa";
+import { FaHome, FaCalculator, FaBullseye, FaHistory, FaCalendarAlt } from "react-icons/fa";
 import { FiHelpCircle } from "react-icons/fi";
 
 import "./Sidebar.css"
@@ -21,8 +21,8 @@ const menuItems = [
     url: "calcular",
   },
   {
-    title: "Cadastrar veículo",
-    icon: FaCar,
+    title: "Relatório Semanal",
+    icon: FaCalendarAlt,
     url: "#cadastrar",
   },
   {
@@ -31,7 +31,12 @@ const menuItems = [
     url: "#historico",
   },
   {
-    title: "Como usar?",
+    title: "Metas",
+    icon: FaBullseye,
+    url: "#historico",
+  },
+  {
+    title: "Ajuda",
     icon: FiHelpCircle,
     url: "#ajuda",
   },

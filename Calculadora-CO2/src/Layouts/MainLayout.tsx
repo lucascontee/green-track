@@ -13,7 +13,7 @@ export function MainLayout() {
       
       <div className='d-flex flex-grow-1'>
         <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
-        <div className="m-5 main-content flex-grow-1 d-flex flex-column">
+        <div className="main-content flex-grow-1 d-flex flex-column">
           <Outlet /> 
         </div>
       </div>
