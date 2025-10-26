@@ -3,6 +3,7 @@ import './App.css'
 import Home from './Pages/Home/Home'
 import { MainLayout } from './Layouts/MainLayout'
 import { CreateCalculation } from './Pages/CreateCalculation/CreateCalculation'
+import { HistoryPage } from './Pages/HistoryPage/HistoryPage'
 
 
 
@@ -14,6 +15,7 @@ function App() {
         
         <Route path="home" element={<Home />} />
         <Route path="calcular" element={<CreateCalculation />} />
+        <Route path="history" element={<HistoryPage />} />
 
       </Route>
     </Routes>

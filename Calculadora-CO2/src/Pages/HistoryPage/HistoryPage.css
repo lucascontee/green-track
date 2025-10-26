@@ -1,0 +1,54 @@
+:root {
+  --eco-green: #2d7a5f;
+  --eco-green-light: #4a9d7f;
+  --eco-green-lighter: #e8f5f0;
+  --eco-blue: #3b82f6;
+  --eco-blue-light: #60a5fa;
+  --eco-warning: #f59e0b;
+  --eco-warning-light: #fef3c7;
+  
+  --background-color: #f8faf9;
+  --card-bg: #ffffff;
+  
+  --text-primary: #1a3a2e;
+  --text-muted: #5f7d73;
+  
+  --border-color: #d1e4dc;
+}
+
+.bg-eco-green {
+  background-color: var(--eco-green);
+}
+
+.bg-eco-green-lighter {
+  background-color: var(--eco-green-lighter);
+}
+
+.badge-eco-warning {
+  background-color: var(--eco-warning-light);
+  color: var(--eco-warning);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.text-muted-green {
+  color: var(--text-muted) !important;
+}
+
+.text-eco-green-emission {
+  color: var(--eco-green) !important;
+} 
+s
+.text-eco-warning {
+  color: var(--eco-warning);
+}
+
+
+.emission-text{
+  font-size: 16px !important;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--eco-green);
+  box-shadow: 0 0 0 0.25rem rgba(45, 122, 95, 0.15);
+}

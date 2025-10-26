@@ -38,7 +38,7 @@
   background-color: var(--eco-warning-light);
 }
 
-.badge-eco-warning {
+.badge-eco-warning{
   background-color: var(--eco-warning-light);
   color: var(--eco-warning) !important;
   border: 1px solid rgba(245, 158, 11, 0.3);

@@ -21,14 +21,14 @@ const menuItems = [
     url: "calcular",
   },
   {
+    title: "Histórico de viagens",
+    icon: FaHistory,
+    url: "history",
+  },
+  {
     title: "Relatório Semanal",
     icon: FaCalendarAlt,
     url: "#cadastrar",
-  },
-  {
-    title: "Histórico de viagens",
-    icon: FaHistory,
-    url: "#historico",
   },
   {
     title: "Metas",
