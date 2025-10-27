@@ -13,7 +13,7 @@ const menuItems = [
   {
     title: "Página principal",
     icon: FaHome,
-    url: "home"
+    url: "/"
   },
   {
     title: "Calcular emissão",
@@ -28,7 +28,7 @@ const menuItems = [
   {
     title: "Relatório Semanal",
     icon: FaCalendarAlt,
-    url: "#cadastrar",
+    url: "report",
   },
   {
     title: "Metas",

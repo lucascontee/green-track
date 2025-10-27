@@ -20,14 +20,8 @@
   --border-color: #d1e4dc;
 }
 
-.text-eco-green-light {
-  color: var(--eco-green-light);
-}
-
-.text-eco-warning {
-  color: var(--eco-warning) !important;
-}
-
-.bg-eco-warning-light {
-  background-color: var(--eco-warning-light);
+.card-eco-green {
+  border: 2px solid var(--border-color) !important;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
 }
