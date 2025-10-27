@@ -43,7 +43,7 @@ const menuItems = [
   {
     title: "Ajuda",
     icon: FiHelpCircle,
-    url: "#ajuda",
+    url: "help",
   },
 ];
 
