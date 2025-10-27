@@ -33,7 +33,7 @@ const menuItems = [
   {
     title: "Metas",
     icon: FaBullseye,
-    url: "#historico",
+    url: "goal",
   },
   {
     title: "Ajuda",
