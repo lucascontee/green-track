@@ -5,6 +5,7 @@ import { MainLayout } from './Layouts/MainLayout'
 import { CreateCalculation } from './Pages/CreateCalculation/CreateCalculation'
 import { HistoryPage } from './Pages/HistoryPage/HistoryPage'
 import { GoalPage } from './Pages/GoalPage/GoalPage'
+import { RankingPage } from './Pages/RankingPage/RankingPage'
 
 
 
@@ -18,6 +19,7 @@ function App() {
         <Route path="calcular" element={<CreateCalculation />} />
         <Route path="history" element={<HistoryPage />} />
         <Route path="goal" element={<GoalPage />} />
+        <Route path="ranking" element={<RankingPage />} />
 
 
       </Route>

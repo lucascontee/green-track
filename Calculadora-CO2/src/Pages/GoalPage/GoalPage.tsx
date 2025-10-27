@@ -47,8 +47,8 @@ export function GoalPage() {
             <div className="card card-eco-green card-eco-gradient-green mb-4">
               <div className="card-body p-4">
                 <div className="d-flex align-items-center gap-3 mb-3">
-                  <div className="icon-circle bg-eco-green">
-                    <FiTarget className="text-white" size={24} />
+                  <div>
+                    <FiTarget className="" size={24} />
                   </div>
                   <div>
                     <h5 className="mb-0">Meta Mensal Ativa</h5>

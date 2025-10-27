@@ -1,4 +1,4 @@
-import { FaHome, FaCalculator, FaBullseye, FaHistory, FaCalendarAlt } from "react-icons/fa";
+import { FaHome, FaCalculator, FaBullseye, FaHistory, FaCalendarAlt, FaTrophy } from "react-icons/fa";
 import { FiHelpCircle } from "react-icons/fi";
 
 import "./Sidebar.css"
@@ -34,6 +34,11 @@ const menuItems = [
     title: "Metas",
     icon: FaBullseye,
     url: "goal",
+  },
+  {
+    title: "Ranking de Veículos",
+    icon: FaTrophy,
+    url: "ranking",
   },
   {
     title: "Ajuda",
