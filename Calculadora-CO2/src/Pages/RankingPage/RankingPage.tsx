@@ -76,8 +76,7 @@ export function RankingPage() {
             </p>
           </div>
 
-          {/* Ranking Card */}
-          <div className="card card-eco-green">
+          <div className="card">
             <div className="card-body p-0">
               <div className="p-4 border-bottom">
                 <div className="d-flex align-items-center gap-3">

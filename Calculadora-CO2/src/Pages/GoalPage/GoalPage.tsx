@@ -64,7 +64,7 @@ export function GoalPage() {
           )}
 
           {/* Goal Form Card */}
-          <div className="card card-eco-green">
+          <div className="card">
             <div className="card-body p-4">
               <h5 className="card-title mb-4">
                 {savedGoal ? "Atualizar Meta Mensal" : "Definir Meta Mensal"}

@@ -70,7 +70,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                   <a href={item.url} 
                       className="sidebar-menu-link"
                       onClick={onClose}>
-                    <Icon size={20} />
+                    <Icon size={20} className="sidebar-icon-menu" />
                     <span>{item.title}</span>
                   </a>
                 </li>

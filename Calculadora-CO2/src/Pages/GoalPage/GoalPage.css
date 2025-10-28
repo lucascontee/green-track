@@ -1,26 +1,4 @@
-:root {
-  --eco-green: #2d7a5f;
-  --eco-green-light: #4a9d7f;
-  --eco-green-lighter: #e8f5f0;
-  --eco-blue: #3b82f6;
-  --eco-blue-light: #60a5fa;
-  --eco-warning: #f59e0b;
-  --eco-warning-light: #fef3c7;
-  
-  --background-color: #f8faf9;
-  --card-bg: #ffffff;
-  
-  --text-primary: #1a3a2e;
-  --text-muted: #5f7d73;
-  
-  --border-color: #d1e4dc;
-}
 
-.card-eco-green {
-  border: 2px solid var(--border-color);
-  border-radius: 0.75rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
-}
 
 .card-eco-gradient-green {
   background: linear-gradient(135deg, #ffffff 0%, rgba(232, 245, 240, 0.3) 100%);

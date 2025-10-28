@@ -6,3 +6,15 @@
   font-family: 'Courier New', Courier, monospace;
   color: #333;
 }
+
+.main-div{
+  max-width: 1720px;
+}
+
+.formula-text-eco-green{
+  color: var(--text-eco-green)
+}
+
+.card-eco-green-help{
+  border: 1px solid rgb(155, 155, 155) !important;
+}

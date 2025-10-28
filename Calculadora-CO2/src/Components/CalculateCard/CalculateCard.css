@@ -1,21 +1,3 @@
-:root {
-  --eco-green: #2d7a5f;
-  --eco-green-light: #4a9d7f;
-  --eco-green-lighter: #e8f5f0;
-  --eco-blue: #3b82f6;
-  --eco-blue-light: #60a5fa;
-  --eco-warning: #f59e0b;
-  --eco-warning-light: #fef3c7;
-  
-  --background-color: #f8faf9;
-  --card-bg: #ffffff;
-  
-  --text-primary: #1a3a2e;
-  --text-muted: #5f7d73;
-  
-  --border-color: #d1e4dc;
-}
-
 .card-border{
     border: 2px solid #d1e4dc !important;
 }
