@@ -14,10 +14,9 @@ public class Travel
 
     public string TransportType { get; set; } = String.Empty;
 
-    public string TransportLabel { get; set; } = String.Empty;
+    public string TransportSize { get; set; } = String.Empty;
 
     public string? FuelType { get; set; }
-
-    public string? CarType { get; set; }
+    public string? TransportLabel { get; set; } = String.Empty;
 
 }
