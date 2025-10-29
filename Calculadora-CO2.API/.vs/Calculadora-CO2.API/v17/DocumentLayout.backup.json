@@ -86,7 +86,7 @@
               "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
               "ToolTip": "D:\\Projetos\\Facens\\Calculadora-C02\\Calculadora-CO2.API\\Data\\AppDbContext.cs",
               "RelativeToolTip": "Data\\AppDbContext.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAA9wCQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAowCQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-28T23:50:58.278Z",
               "EditorCaption": ""
@@ -101,7 +101,8 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T23:47:46.19Z"
+              "WhenOpened": "2025-10-28T23:47:46.19Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -113,7 +114,8 @@
               "RelativeToolTip": "Calculadora-CO2.API.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-10-28T23:45:42.972Z"
+              "WhenOpened": "2025-10-28T23:45:42.972Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -125,7 +127,8 @@
               "RelativeToolTip": "Services\\TravelService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T23:45:26.24Z"
+              "WhenOpened": "2025-10-28T23:45:26.24Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -150,7 +153,8 @@
               "RelativeToolTip": "Controllers\\TravelsController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T23:32:40.076Z"
+              "WhenOpened": "2025-10-28T23:32:40.076Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -162,7 +166,8 @@
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-10-28T23:32:24.53Z"
+              "WhenOpened": "2025-10-28T23:32:24.53Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -1,9 +1,0 @@
-/.vs/
-
-[Bb]in/
-[Oo]bj/
-
-*.suo
-*.user
-*.userosscache
-*.sln.docstates
