@@ -1,6 +1,15 @@
+import { useNavigate } from "react-router-dom";
+
+
 import "./HelpCard.css"
 
 export function HelpCard(){
+
+    const navigate = useNavigate();
+    const handleNavigateToHelp = () => {
+        navigate('/help'); // '/help' é a rota da sua página de ajuda
+    };
+
     return(
         <div className="help-card mt-5 bg-eco-green-lighter border rounded p-4">
             <div style={{ maxWidth: '48rem' }}>
@@ -11,11 +20,8 @@ export function HelpCard(){
                 personalizadas para reduzir suas emissões.
             </p>
             <div className="d-flex flex-wrap gap-3">
-                <button className="btn btn-outline-success">
-                Saiba Mais
-                </button>
-                <button className="btn btn-link text-eco-green text-decoration-none">
-                Ver Metodologia
+                <button className="btn btn-outline-success" onClick={handleNavigateToHelp}>
+                Como funciona?
                 </button>
             </div>
             </div>

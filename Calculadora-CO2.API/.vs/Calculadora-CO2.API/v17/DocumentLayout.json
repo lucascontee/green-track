@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "D:\\Projetos\\Facens\\Calculadora-C02\\Calculadora-CO2.API\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C45815B2-BBA7-49A8-BF85-18A6FC4311CB}|Calculadora-CO2.API.csproj|d:\\projetos\\facens\\calculadora-c02\\calculadora-co2.api\\services\\travelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C45815B2-BBA7-49A8-BF85-18A6FC4311CB}|Calculadora-CO2.API.csproj|solutionrelative:services\\travelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C45815B2-BBA7-49A8-BF85-18A6FC4311CB}|Calculadora-CO2.API.csproj|d:\\projetos\\facens\\calculadora-c02\\calculadora-co2.api\\controllers\\travelscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C45815B2-BBA7-49A8-BF85-18A6FC4311CB}|Calculadora-CO2.API.csproj|solutionrelative:controllers\\travelscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C45815B2-BBA7-49A8-BF85-18A6FC4311CB}|Calculadora-CO2.API.csproj|d:\\projetos\\facens\\calculadora-c02\\calculadora-co2.api\\services\\travelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C45815B2-BBA7-49A8-BF85-18A6FC4311CB}|Calculadora-CO2.API.csproj|solutionrelative:services\\travelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C45815B2-BBA7-49A8-BF85-18A6FC4311CB}|Calculadora-CO2.API.csproj|d:\\projetos\\facens\\calculadora-c02\\calculadora-co2.api\\models\\usergoal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C45815B2-BBA7-49A8-BF85-18A6FC4311CB}|Calculadora-CO2.API.csproj|solutionrelative:models\\usergoal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C45815B2-BBA7-49A8-BF85-18A6FC4311CB}|Calculadora-CO2.API.csproj|d:\\projetos\\facens\\calculadora-c02\\calculadora-co2.api\\controllers\\goalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C45815B2-BBA7-49A8-BF85-18A6FC4311CB}|Calculadora-CO2.API.csproj|solutionrelative:controllers\\goalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C45815B2-BBA7-49A8-BF85-18A6FC4311CB}|Calculadora-CO2.API.csproj|d:\\projetos\\facens\\calculadora-c02\\calculadora-co2.api\\services\\goalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C45815B2-BBA7-49A8-BF85-18A6FC4311CB}|Calculadora-CO2.API.csproj|solutionrelative:services\\goalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C45815B2-BBA7-49A8-BF85-18A6FC4311CB}|Calculadora-CO2.API.csproj|d:\\projetos\\facens\\calculadora-c02\\calculadora-co2.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -35,10 +47,6 @@
       "RelativeMoniker": "D:0:0:{C45815B2-BBA7-49A8-BF85-18A6FC4311CB}|Calculadora-CO2.API.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C45815B2-BBA7-49A8-BF85-18A6FC4311CB}|Calculadora-CO2.API.csproj|d:\\projetos\\facens\\calculadora-c02\\calculadora-co2.api\\models\\usergoal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C45815B2-BBA7-49A8-BF85-18A6FC4311CB}|Calculadora-CO2.API.csproj|solutionrelative:models\\usergoal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C45815B2-BBA7-49A8-BF85-18A6FC4311CB}|Calculadora-CO2.API.csproj|d:\\projetos\\facens\\calculadora-c02\\calculadora-co2.api\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C45815B2-BBA7-49A8-BF85-18A6FC4311CB}|Calculadora-CO2.API.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -58,7 +66,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -67,6 +75,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "GoalController.cs",
+              "DocumentMoniker": "D:\\Projetos\\Facens\\Calculadora-C02\\Calculadora-CO2.API\\Controllers\\GoalController.cs",
+              "RelativeDocumentMoniker": "Controllers\\GoalController.cs",
+              "ToolTip": "D:\\Projetos\\Facens\\Calculadora-C02\\Calculadora-CO2.API\\Controllers\\GoalController.cs",
+              "RelativeToolTip": "Controllers\\GoalController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-30T03:09:02.567Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GoalService.cs",
+              "DocumentMoniker": "D:\\Projetos\\Facens\\Calculadora-C02\\Calculadora-CO2.API\\Services\\GoalService.cs",
+              "RelativeDocumentMoniker": "Services\\GoalService.cs",
+              "ToolTip": "D:\\Projetos\\Facens\\Calculadora-C02\\Calculadora-CO2.API\\Services\\GoalService.cs",
+              "RelativeToolTip": "Services\\GoalService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-30T03:08:53.461Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "TripHistoryDTO.cs",
               "DocumentMoniker": "D:\\Projetos\\Facens\\Calculadora-C02\\Calculadora-CO2.API\\DTO\\TripHistoryDTO.cs",
               "RelativeDocumentMoniker": "DTO\\TripHistoryDTO.cs",
@@ -74,12 +108,11 @@
               "RelativeToolTip": "DTO\\TripHistoryDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAQAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-30T01:19:52.402Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-30T01:19:52.402Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "TravelDTO.cs",
               "DocumentMoniker": "D:\\Projetos\\Facens\\Calculadora-C02\\Calculadora-CO2.API\\DTO\\TravelDTO.cs",
               "RelativeDocumentMoniker": "DTO\\TravelDTO.cs",
@@ -87,12 +120,11 @@
               "RelativeToolTip": "DTO\\TravelDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-29T22:16:08.328Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-29T22:16:08.328Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 2,
               "Title": "UserGoal.cs",
               "DocumentMoniker": "D:\\Projetos\\Facens\\Calculadora-C02\\Calculadora-CO2.API\\Models\\UserGoal.cs",
               "RelativeDocumentMoniker": "Models\\UserGoal.cs",
@@ -100,11 +132,12 @@
               "RelativeToolTip": "Models\\UserGoal.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-29T00:21:00.516Z"
+              "WhenOpened": "2025-10-29T00:21:00.516Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "D:\\Projetos\\Facens\\Calculadora-C02\\Calculadora-CO2.API\\appsettings.Development.json",
               "RelativeDocumentMoniker": "appsettings.Development.json",
@@ -112,25 +145,24 @@
               "RelativeToolTip": "appsettings.Development.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-10-28T23:54:41.166Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-28T23:54:41.166Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "TravelService.cs",
               "DocumentMoniker": "D:\\Projetos\\Facens\\Calculadora-C02\\Calculadora-CO2.API\\Services\\TravelService.cs",
               "RelativeDocumentMoniker": "Services\\TravelService.cs",
               "ToolTip": "D:\\Projetos\\Facens\\Calculadora-C02\\Calculadora-CO2.API\\Services\\TravelService.cs",
               "RelativeToolTip": "Services\\TravelService.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAowEMAAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAADwvxgAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-28T23:45:26.24Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "20251029225932_AddTransportSizeeToTravel.cs",
               "DocumentMoniker": "D:\\Projetos\\Facens\\Calculadora-C02\\Calculadora-CO2.API\\Migrations\\20251029225932_AddTransportSizeeToTravel.cs",
               "RelativeDocumentMoniker": "Migrations\\20251029225932_AddTransportSizeeToTravel.cs",
@@ -142,7 +174,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "D:\\Projetos\\Facens\\Calculadora-C02\\Calculadora-CO2.API\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
@@ -154,20 +186,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "TravelsController.cs",
               "DocumentMoniker": "D:\\Projetos\\Facens\\Calculadora-C02\\Calculadora-CO2.API\\Controllers\\TravelsController.cs",
               "RelativeDocumentMoniker": "Controllers\\TravelsController.cs",
               "ToolTip": "D:\\Projetos\\Facens\\Calculadora-C02\\Calculadora-CO2.API\\Controllers\\TravelsController.cs",
               "RelativeToolTip": "Controllers\\TravelsController.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAmwDMAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAowCQAAABQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-29T23:10:50.794Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Projetos\\Facens\\Calculadora-C02\\Calculadora-CO2.API\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -179,7 +211,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "Calculadora-CO2.API.csproj",
               "DocumentMoniker": "D:\\Projetos\\Facens\\Calculadora-C02\\Calculadora-CO2.API\\Calculadora-CO2.API.csproj",
               "RelativeDocumentMoniker": "Calculadora-CO2.API.csproj",
@@ -191,7 +223,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "Travel.cs",
               "DocumentMoniker": "D:\\Projetos\\Facens\\Calculadora-C02\\Calculadora-CO2.API\\Models\\Travel.cs",
               "RelativeDocumentMoniker": "Models\\Travel.cs",
@@ -199,12 +231,11 @@
               "RelativeToolTip": "Models\\Travel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T23:41:52.897Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-28T23:41:52.897Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Projetos\\Facens\\Calculadora-C02\\Calculadora-CO2.API\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",

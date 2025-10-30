@@ -26,7 +26,6 @@ export const calculateEmissions = async (
 
 export const getTravelHistory = async (): Promise<ITripHistory[]> => {
   try {
-    // A API retorna um array de ITripHistory
     const response = await api.get<ITripHistory[]>('/Travels/history');
     return response.data;
   } catch (error: any) {

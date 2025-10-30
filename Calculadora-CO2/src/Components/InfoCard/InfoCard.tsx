@@ -1,38 +1,48 @@
 import { FaTree, FaMapMarkerAlt } from "react-icons/fa";
 import { FiTarget } from "react-icons/fi";
+// Importar o tipo
+import type { ITripHistory } from "../../Types/travel.types";
 
 import "./InfoCard.css"
 
-export function InfoCard(){
+// 1. Definir as props que o componente vai receber
+interface InfoCardProps {
+  cleanTripsCount: number;
+  lastTrip: ITripHistory | null;
+}
 
-    const stats = [
+export function InfoCard({ cleanTripsCount, lastTrip }: InfoCardProps){
+
+  // 2. Construir o array de stats dinamicamente
+  const stats = [
     {
       icon: FiTarget,
       label: "Meta de emissão máxima por mês",
       isGoal: true,
-      goalValue: "200.0",
-      emittedValue: "145.7",
+      goalValue: "200.0", // (Este ainda está hardcoded, ok)
+      emittedValue: "145.7", // (Este ainda está hardcoded, ok)
       emittedColor: "text-emitted",
       color: "text-eco-green"
     },
     {
       icon: FaTree,
       label: "Você já fez",
-      value: "12",
+      value: cleanTripsCount.toString(), // <-- DADO DINÂMICO
       description: "viagens limpas no total",
       color: "text-eco-green"
     },
     {
       icon: FaMapMarkerAlt,
       label: "Última viagem",
-      value: "15.2 kg CO₂e",
-      description: "com Carro Elétrico",
+      // <-- LÓGICA DINÂMICA
+      value: lastTrip ? `${lastTrip.emission.toFixed(1)} kg CO₂e` : "N/A",
+      description: lastTrip ? `veículo: ${lastTrip.transportType}` : "Nenhuma viagem registrada",
       color: "text-eco-green"
     }
   ];
 
 
-    return (
+  return (
     <div className="row mt-5">
       {stats.map((stat, index) => {
         const Icon = stat.icon;

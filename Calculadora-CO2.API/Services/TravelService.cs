@@ -144,7 +144,7 @@ namespace Calculadora_CO2.API.Services
                     fatorEmissaoGramsKm = 20;
                     break;
                 case "bicicleta":
-                case "ape":
+                case "a pé":
                     fatorEmissaoGramsKm = 0;
                     break;
                 default:
