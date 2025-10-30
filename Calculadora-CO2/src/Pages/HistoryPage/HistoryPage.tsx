@@ -1,85 +1,59 @@
-import { useState } from "react";
-import { FaHistory, FaFilter, FaPencilAlt, FaRegTrashAlt } from "react-icons/fa"
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { useEffect, useState } from "react";
+import { FaHistory, FaFilter, FaRegTrashAlt } from "react-icons/fa"
+import { getTravelHistory, deleteTravelById } from "../../Service/TravelService"
+import type { ITripHistory } from "../../Types/travel.types.ts"; // 4. Importe o tipo
 
 import "./HistoryPage.css"
 
-interface Trip {
-  id: string;
-  date: string;
-  distance: number;
-  transport: string;
-  fuelType?: string;
-  carType?: string;
-  emission: number;
-}
-
 export function HistoryPage() {
-  // Mock data - em produção, isso viria de um banco de dados
-  const [trips] = useState<Trip[]>([
-    {
-      id: "1",
-      date: "2025-10-20",
-      distance: 35,
-      transport: "Carro",
-      fuelType: "Gasolina",
-      carType: "Médio",
-      emission: 5.25,
-    },
-    {
-      id: "2",
-      date: "2025-10-18",
-      distance: 12,
-      transport: "Bicicleta",
-      emission: 0,
-    },
-    {
-      id: "3",
-      date: "2025-10-15",
-      distance: 45,
-      transport: "Ônibus",
-      emission: 1.8,
-    },
-    {
-      id: "4",
-      date: "2025-10-12",
-      distance: 28,
-      transport: "Carro",
-      fuelType: "Híbrido",
-      carType: "Pequeno",
-      emission: 1.68,
-    },
-    {
-      id: "5",
-      date: "2025-10-10",
-      distance: 8,
-      transport: "Patinete Elétrico",
-      emission: 0.08,
-    },
-    {
-      id: "6",
-      date: "2025-10-08",
-      distance: 150,
-      transport: "Avião",
-      emission: 37.5,
-    },
-    {
-      id: "7",
-      date: "2025-10-05",
-      distance: 22,
-      transport: "Moto",
-      emission: 1.76,
-    },
-  ]);
+const [trips, setTrips] = useState<ITripHistory[]>([]);
+const [isLoading, setIsLoading] = useState(true);
+const [error, setError] = useState<string | null>(null);
+const [filterTransport, setFilterTransport] = useState("todos");
 
-  const [filterTransport, setFilterTransport] = useState("todos");
+    useEffect(() => {
+    const fetchHistory = async () => {
+      try {
+        setIsLoading(true);
+        setError(null);
+        
+        const data = await getTravelHistory();
+        
+        setTrips(data);
+      } catch (err: any) {
+        setError(err.message || "Falha ao carregar o histórico.");
+      } finally {
+        setIsLoading(false);
+      }
+    };
 
-  // const totalEmissions = trips.reduce((sum, trip) => sum + trip.emission, 0);
-  // const totalDistance = trips.reduce((sum, trip) => sum + trip.distance, 0);
-  // const averageEmission = totalEmissions / trips.length;
+    fetchHistory();
+  }, []);
 
-  const filteredTrips = filterTransport === "todos" 
+  const handleDelete = async (id: string) => {    
+    try {
+      const success = await deleteTravelById(id);
+      
+      if (success) {
+        // Remove a viagem do estado local para atualizar a UI
+        setTrips(currentTrips => currentTrips.filter(trip => trip.id !== id));
+      } else {
+        setError("Não foi possível deletar a viagem.");
+      }
+    } catch (err: any) {
+      setError(err.message || "Falha ao deletar a viagem.");
+    }
+  };
+
+    const filteredTrips = filterTransport === "todos" 
     ? trips 
-    : trips.filter(trip => trip.transport.toLowerCase() === filterTransport.toLowerCase());
+    : trips.filter(trip => trip.transportType.toLowerCase() === filterTransport.toLowerCase());
+
+    function capitalize(text: string) {
+      if (!text) return "";
+      return text.charAt(0).toUpperCase() + text.slice(1).toLowerCase();
+    }
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
@@ -100,7 +74,29 @@ export function HistoryPage() {
     return { text: "Alta", class: "bg-danger" };
   };
 
+  if (isLoading) {
+    return (
+      <div className="container-fluid py-4 text-center">
+        <div className="spinner-border text-eco-green" role="status">
+          <span className="visually-hidden">Loading...</span>
+        </div>
+        <p className="text-muted-green mt-2">Carregando histórico...</p>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="container-fluid py-4">
+        <div className="alert alert-danger" role="alert">
+          <strong>Erro:</strong> {error}
+        </div>
+      </div>
+    );
+  }
+
   return (
+    
     <div className="container-fluid py-4">
 
       <div className="mb-4">
@@ -115,9 +111,7 @@ export function HistoryPage() {
         </div>
       </div>
 
-      {/* Filters and Table */}
       <div>
-        {/* Filters */}
         <div className="card-body p-3 border-bottom">
           <div className="row align-items-center">
             <div className="col-12 col-md-6 mb-3 mb-md-0">
@@ -175,12 +169,12 @@ export function HistoryPage() {
                           <small className="text-muted-green">{formatDate(trip.date)}</small>
                         </td>
                         <td className="align-middle">
-                          <span className="fw-semibold">{trip.transport}</span>
+                          <span className="fw-semibold">{capitalize(trip.transportType)}</span>
                         </td>
                         <td className="align-middle d-none d-md-table-cell">
-                          {trip.fuelType && trip.carType ? (
+                          {trip.fuel && trip.transportType ? (
                             <small className="text-muted-green">
-                              {trip.fuelType} • {trip.carType}
+                              {capitalize(trip.fuel)} • {capitalize(trip.transportSize)}
                             </small>
                           ) : (
                             <small className="text-muted-green">—</small>
@@ -202,14 +196,9 @@ export function HistoryPage() {
                         <td className="align-middle pe-4">
                           <div className="d-flex gap-2 justify-content-center">
                             <button
-                              className="btn btn-sm btn-outline-success p-1"
-                              title="Ver detalhes"
-                            >
-                              <FaPencilAlt size={16} />
-                            </button>
-                            <button
                               className="btn btn-sm btn-outline-danger p-1"
                               title="Excluir"
+                              onClick={() => handleDelete(trip.id)}
                             >
                               <FaRegTrashAlt size={16} />
                             </button>

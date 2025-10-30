@@ -32,5 +32,40 @@ namespace Calculadora_CO2.API.Controllers
                 return StatusCode(500, $"Erro ao criar viagem: {ex.Message}");
             }
         }
+
+        [HttpGet("history")]
+        public async Task<ActionResult<List<TripHistoryDTO>>> GetTravelHistory()
+        {
+            try
+            {
+                var travelHistory = await _travelService.GetTravelHistoryAsync();
+                return Ok(travelHistory);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Erro ao obter histórico de viagens: {ex.Message}");
+            }
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> DeleteById (int id)
+        {
+            try
+            {
+                bool deleted = await _travelService.DeleteTravelByIdAsync(id);
+                if (deleted)
+                {
+                    return Ok($"Viagem com ID {id} deletada com sucesso.");
+                }
+                else
+                {
+                    return NotFound($"Viagem com ID {id} não encontrada.");
+                }
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Erro ao deletar viagem: {ex.Message}");
+            }
+        }
     }
 }

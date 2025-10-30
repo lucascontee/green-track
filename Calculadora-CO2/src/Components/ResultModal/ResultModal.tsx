@@ -21,6 +21,11 @@ export function ResultModal({result,onClose}: ResultCardProps) {
     return null;
   }
 
+  function capitalize(text: string) {
+    if (!text) return "";
+    return text.charAt(0).toUpperCase() + text.slice(1).toLowerCase();
+  }
+
   return (
     <>
       <div className="modal-backdrop fade show"></div>
@@ -66,11 +71,10 @@ export function ResultModal({result,onClose}: ResultCardProps) {
                   Meio de Transporte
                 </small>
                 <p className="mb-0 fw-semibold">
-                  {result.transportLabel}
+                  {capitalize(result.transportType)}
                 </p>
               </div>
 
-              {/* Seção Condicional (Carro) */}
               {result.transportType === "carro" && (
                 <>
                   <div className="mb-3">
@@ -78,7 +82,7 @@ export function ResultModal({result,onClose}: ResultCardProps) {
                       Combustível
                     </small>
                     <p className="mb-0 fw-semibold">
-                      {result.fuelType}
+                      {capitalize(result.fuelType)}
                     </p>
                   </div>
 
@@ -87,7 +91,7 @@ export function ResultModal({result,onClose}: ResultCardProps) {
                       Tipo do Carro
                     </small>
                     <p className="mb-0 fw-semibold">
-                      {result.transportSize}
+                      {capitalize(result.transportSize)}
                     </p>
                   </div>
                 </>
@@ -100,7 +104,7 @@ export function ResultModal({result,onClose}: ResultCardProps) {
                       Tamanho da Moto
                     </small>
                     <p className="mb-0 fw-semibold">
-                      {result.transportSize}
+                      {capitalize(result.transportSize)}
                     </p>
                   </div>
                 </>

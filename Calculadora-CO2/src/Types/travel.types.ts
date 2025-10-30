@@ -14,3 +14,14 @@ export interface ITravelResult {
   fuelType: string;
   emited: number;
 }
+
+export interface ITripHistory {
+  id: string;
+  date: string;
+  distance: number;
+  transportLabel: string; 
+  transportSize: string;  
+  transportType: string;  
+  fuel: string;          
+  emission: number;
+}

@@ -6,7 +6,7 @@ interface Vehicle {
   id: number;
   name: string;
   fuel: string;
-  emissionFactor: number; // kg CO2 per km
+  emissionFactor: number; 
 }
 
 const vehicles: Vehicle[] = [
@@ -17,35 +17,120 @@ const vehicles: Vehicle[] = [
     emissionFactor: 0,
   },
   {
-    id: 2,
-    name: "Carro Elétrico",
+    id: 1,
+    name: "Bicicleta Elétrica",
     fuel: "Eletricidade",
-    emissionFactor: 0.05,
+    emissionFactor: 20,
+  },
+  {
+    id: 2,
+    name: "Carro Leve",
+    fuel: "Eletricidade",
+    emissionFactor: 6,
   },
   {
     id: 3,
-    name: "Moto",
-    fuel: "Gasolina",
-    emissionFactor: 0.07,
+    name: "Carro Leve",
+    fuel: "Híbrido",
+    emissionFactor: 0.05,
   },
   {
     id: 4,
-    name: "Carro a Etanol",
-    fuel: "Etanol",
-    emissionFactor: 0.11,
+    name: "Carro Leve",
+    fuel: "Álcool",
+    emissionFactor: 80,
   },
   {
     id: 5,
-    name: "Carro a Gasolina",
+    name: "Carro Leve",
     fuel: "Gasolina",
-    emissionFactor: 0.18,
+    emissionFactor: 280,
   },
   {
     id: 6,
-    name: "Carro a Diesel",
-    fuel: "Diesel",
-    emissionFactor: 0.20,
+    name: "Carro Médio",
+    fuel: "Eletricidade",
+    emissionFactor: 7,
   },
+  {
+    id: 7,
+    name: "Carro Médio",
+    fuel: "Híbrido",
+    emissionFactor: 29,
+  },
+  {
+    id: 8,
+    name: "Carro Médio",
+    fuel: "Álcool",
+    emissionFactor: 89,
+  },
+  {
+    id: 9,
+    name: "Carro Médio",
+    fuel: "Gasolina",
+    emissionFactor: 311,
+  },
+    {
+    id: 10,
+    name: "Carro Pesado",
+    fuel: "Eletricidade",
+    emissionFactor: 8,
+  },
+  {
+    id: 11,
+    name: "Carro Pesado",
+    fuel: "Híbrido",
+    emissionFactor: 33,
+  },
+  {
+    id: 12,
+    name: "Carro Pesado",
+    fuel: "Álcool",
+    emissionFactor: 106,
+  },
+  {
+    id: 13,
+    name: "Carro Pesado",
+    fuel: "Gasolina",
+    emissionFactor: 373,
+  },
+  {
+    id: 14,
+    name: "Moto Grande",
+    fuel: "Não aplica",
+    emissionFactor: 115,
+  },
+  {
+    id: 15,
+    name: "Moto Média",
+    fuel: "Não aplica",
+    emissionFactor: 82,
+  },
+  {
+    id: 16,
+    name: "Moto Pequena",
+    fuel: "Não aplica",
+    emissionFactor: 58,
+  },
+  {
+    id: 17,
+    name: "Onibus (Por passageiro)",
+    fuel: "Diesel",
+    emissionFactor: 32,
+  },
+  {
+    id: 18,
+    name: "Aviao (Por passageiro)",
+    fuel: "Querosene de aviação",
+    emissionFactor: 123,
+  },
+  {
+    id: 19,
+    name: "A pé",
+    fuel: "Não aplica",
+    emissionFactor: 0,
+  },
+  
 ].sort((a, b) => a.emissionFactor - b.emissionFactor);
 
 export function RankingPage() {

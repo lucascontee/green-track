@@ -18,3 +18,5 @@ public class TravelResultDTO
     public string? FuelType { get; set; }
     public double Emited { get; set; } 
 }
+
+

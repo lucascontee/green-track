@@ -11,11 +11,11 @@ interface Option {
 
 interface CalculateCardProps {
   onCalculate: (data: CalculationData) => void;
-  isLoading: boolean; // Você não está usando isLoading, mas vou manter
+  isLoading: boolean; 
   transportOptions: Option[];
   fuelOptions: Option[];
   carSizeOptions: Option[];
-  motorcycleSizeOptions: Option[]; // <-- MUDANÇA: Estava faltando
+  motorcycleSizeOptions: Option[];
 }
 
 export function CalculateCard({
@@ -23,7 +23,7 @@ export function CalculateCard({
   transportOptions,
   fuelOptions,
   carSizeOptions,
-  motorcycleSizeOptions, // <-- MUDANÇA: Adicionado na desestruturação
+  motorcycleSizeOptions, 
 }: CalculateCardProps) {
 
   const [distance, setDistance] = useState("");
@@ -75,7 +75,6 @@ export function CalculateCard({
           </div>
 
           <form onSubmit={handleSubmit}>
-            {/* ... (Campo Distância - sem mudanças) ... */}
             <div className="mb-4">
               <label htmlFor="distance" className="form-label fw-semibold">
                 Distância a Percorrer

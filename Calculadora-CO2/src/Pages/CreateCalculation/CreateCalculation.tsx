@@ -30,8 +30,8 @@ const transportOptions = [
   { value: "bicicleta", label: "Bicicleta" },
   { value: "bicicleta-eletrica", label: "Bicicleta Elétrica" },
   { value: "patinete", label: "Patinete Elétrico" },
-  { value: "ape", label: "A pé" },
-  { value: "aviao", label: "Avião" },
+  { value: "a pé", label: "A pé" },
+  { value: "avião", label: "Avião" },
 ];
 
 const fuelOptions = [
@@ -117,9 +117,11 @@ export function CreateCalculation() {
       </div>
 
       {error && (
-        <div>
-          <h1>deu ruim</h1>
-        </div>
+        <div className="container-fluid py-4">
+          <div className="alert alert-danger" role="alert">
+            <strong>Erro:</strong> {error}
+          </div>
+      </div>
       )}
 
       {showModal && (

@@ -4,6 +4,7 @@ using Calculadora_CO2.API.Models;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion.Internal;
 using Microsoft.Extensions.Hosting;
 using System;
+using System.Data.Entity;
 
 namespace Calculadora_CO2.API.Services
 {
@@ -26,7 +27,8 @@ namespace Calculadora_CO2.API.Services
                 DistanceKm = travelDto.DistanceKm,
                 EmissionKg = emissionKg,
                 TransportType = travelDto.TransportType!,
-                TransportSize = transportLabel,
+                TransportLabel = transportLabel,
+                TransportSize = travelDto.TransportSize,
                 FuelType = travelDto.FuelType,
             };
 
@@ -46,6 +48,40 @@ namespace Calculadora_CO2.API.Services
             return resultDto;
         }
 
+        public Task<List<TripHistoryDTO>> GetTravelHistoryAsync()
+        {
+            var travels = _context.Travels.OrderByDescending(t => t.CreatedAt).ToList();
+            var travelHistory = travels.Select(t => new TripHistoryDTO
+            {
+                Id = t.Id.ToString(),
+                Date = t.CreatedAt,
+                Distance = t.DistanceKm,
+                TransportType = t.TransportType,
+                TransportSize = t.TransportSize,
+                TransportLabel = t.TransportLabel,
+                Fuel = t.FuelType,
+                Emission = t.EmissionKg
+            }).ToList();
+            return Task.FromResult(travelHistory);
+        }
+
+        public async Task<bool> DeleteTravelByIdAsync(int id)
+        {
+            var travel = await _context.Travels.FindAsync(id);
+            if (travel == null)
+            {
+                return false;
+            }
+            _context.Travels.Remove(travel);
+            await _context.SaveChangesAsync();
+            return true;
+        }
+
+        public async Task GetTravelById(int id)
+        {
+            var travel = await _context.Travels.FindAsync(id);
+        }
+
         private double CalculateEmission(TravelDTO travelDTO)
         {
             double fatorEmissaoGramsKm = 0;
@@ -57,7 +93,7 @@ namespace Calculadora_CO2.API.Services
                 case "carro":
                     switch (travelDTO?.TransportSize?.ToLower())
                     {
-                        case "leve":
+                        case "pequeno":
                             if(travelDTO.FuelType == "gasolina") fatorEmissaoGramsKm = 280;
                             if(travelDTO.FuelType == "alcool") fatorEmissaoGramsKm = 80;
                             if(travelDTO.FuelType == "hibrido") fatorEmissaoGramsKm = 27;
@@ -69,7 +105,7 @@ namespace Calculadora_CO2.API.Services
                             if (travelDTO.FuelType == "hibrido") fatorEmissaoGramsKm = 29;
                             if (travelDTO.FuelType == "eletrico") fatorEmissaoGramsKm = 7;
                             break;
-                        case "pesado":
+                        case "grande":
                             if (travelDTO.FuelType == "gasolina") fatorEmissaoGramsKm = 373;
                             if (travelDTO.FuelType == "alcool") fatorEmissaoGramsKm = 106;
                             if (travelDTO.FuelType == "hibrido") fatorEmissaoGramsKm = 33;
