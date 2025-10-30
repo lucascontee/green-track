@@ -2,6 +2,8 @@
 using Calculadora_CO2.API.DTO;
 using Calculadora_CO2.API.Models;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion.Internal;
+using Microsoft.Extensions.Hosting;
+using System;
 
 namespace Calculadora_CO2.API.Services
 {
@@ -14,10 +16,9 @@ namespace Calculadora_CO2.API.Services
             _context = context;
         }
 
-        public async Task<Travel> CreateTravelAsync(TravelDTO travelDto)
+        public async Task<TravelResultDTO> CreateTravelAsync(TravelDTO travelDto)
         {
             double emissionKg = CalculateEmission(travelDto);
-
             string transportLabel = GetTransportLabel(travelDto);
 
             var newTravel = new Travel
@@ -32,7 +33,17 @@ namespace Calculadora_CO2.API.Services
             _context.Travels.Add(newTravel);
             await _context.SaveChangesAsync();
 
-            return newTravel;
+            var resultDto = new TravelResultDTO
+            {
+                DistanceKm = travelDto.DistanceKm,
+                TransportType = travelDto.TransportType,
+                TransportSize = travelDto.TransportSize,
+                TransportLabel = transportLabel,
+                FuelType = travelDto.FuelType,
+                Emited = emissionKg,
+            };
+
+            return resultDto;
         }
 
         private double CalculateEmission(TravelDTO travelDTO)

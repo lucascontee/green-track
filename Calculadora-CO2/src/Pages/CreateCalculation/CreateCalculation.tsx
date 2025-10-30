@@ -1,28 +1,34 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState } from "react";
 import { CalculateCard } from "../../Components/CalculateCard/CalculateCard";
-import { ResultModal } from "../../Components/ResultModal/ResultModal"; // 1. Importe o ResultCard
+import { ResultModal } from "../../Components/ResultModal/ResultModal";
+import { calculateEmissions } from "../../Service/TravelService"; 
+import type { ITravelRequest, ITravelResult } from '../../Types/travel.types';
 
-// --- Tipos de Dados ---
-// Interface para os dados que vêm do formulário
+
 export interface CalculationData {
-  distance: number;
-  transport: string;
+  distanceKm: string;
+  transportType: string;
+  transportSize: string;
+  transportLabel: string;
   fuelType: string;
-  carType: string;
 }
 
-// Interface para os dados do resultado
-export interface EmissionResult extends CalculationData {
+export interface EmissionResult {
+  distanceKm: string;
+  transportType: string;
+  transportSize: string;
+  transportLabel: string;
+  fuelType: string;
   emission: number;
 }
 
-// --- Opções (Fonte Única da Verdade) ---
-// Mova as opções para o componente pai para que possam ser compartilhadas
 const transportOptions = [
   { value: "carro", label: "Carro" },
   { value: "moto", label: "Moto" },
   { value: "onibus", label: "Ônibus" },
   { value: "bicicleta", label: "Bicicleta" },
+  { value: "bicicleta-eletrica", label: "Bicicleta Elétrica" },
   { value: "patinete", label: "Patinete Elétrico" },
   { value: "ape", label: "A pé" },
   { value: "aviao", label: "Avião" },
@@ -35,52 +41,62 @@ const fuelOptions = [
   { value: "eletrico", label: "Elétrico" },
 ];
 
-const carTypeOptions = [
+const carSizeOptions = [
   { value: "pequeno", label: "Carro Pequeno" },
   { value: "medio", label: "Carro Médio" },
-  { value: "suv", label: "SUV" },
+  { value: "grande", label: "Carro Grande" },
 ];
 
+const motorcycleSizeOptions = [
+  { value: "pequena", label: "Moto Pequena" },
+  { value: "media", label: "Moto Média" },
+  { value: "grande", label: "Moto Grande" },
+]
 
 export function CreateCalculation() {
   
-  // 2. O estado do modal e do resultado vivem aqui, no pai
   const [showModal, setShowModal] = useState(false);
   const [emissionResult, setEmissionResult] = useState<EmissionResult | null>(null);
 
-  // 3. Função que faz o cálculo (LÓGICA DE EXEMPLO)
-  // (Você deve substituir isso pela sua lógica de cálculo real!)
-  const calculateMyEmission = (data: CalculationData): EmissionResult => {
-    let emission = 0;
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+
+  const handleCalculate = async (data: CalculationData) => {
+    setIsLoading(true);
+    setError(null);
+
+    try {
+      const apiRequest: ITravelRequest = {
+        distanceKm: data.distanceKm,
+        transportType: data.transportType,
+        transportSize: data.transportSize,
+        transportLabel: data.transportLabel,
+        fuelType: data.fuelType,
+      };
+      const resultFromApi: ITravelResult = await calculateEmissions(apiRequest);
+      const modalResult: EmissionResult = {
+        distanceKm: resultFromApi.distanceKm,
+        fuelType: resultFromApi.fuelType,
+        emission: resultFromApi.emited,
+        transportType: resultFromApi.transportType,
+        transportSize: resultFromApi.transportSize,
+        transportLabel: resultFromApi.transportLabel
+      };
+
+      setEmissionResult(modalResult);
+      setShowModal(true);
+
+    } catch (err: any) {
+      setError(err.message || 'Ocorreu um erro desconhecido.');
     
-    // LÓGICA DE CÁLCULO DE EXEMPLO (MUITO SIMPLIFICADA)
-    if (data.transport === "carro") {
-      if (data.fuelType === "gasolina") {
-        emission = data.distance * 0.18; // Fator de exemplo
-      } else if (data.fuelType === "eletrico") {
-        emission = data.distance * 0.05;
-      }
-    } else if (data.transport === "bicicleta") {
-      emission = 0;
-    } else {
-      emission = data.distance * 0.1; // Fator genérico
+    } finally {
+      setIsLoading(false);
     }
-
-    return { ...data, emission: emission };
   };
 
-  // 4. Esta função é passada para o CalculateCard
-  const handleCalculate = (data: CalculationData) => {
-    const result = calculateMyEmission(data);
-    setEmissionResult(result);
-    setShowModal(true);
-  };
-
-  // 5. Esta função é passada para o ResultCard
   const handleCloseModal = () => {
     setShowModal(false);
-    // Opcional: limpar o resultado ao fechar
-    // setEmissionResult(null); 
   };
 
   return (
@@ -90,13 +106,21 @@ export function CreateCalculation() {
           
           <CalculateCard
             onCalculate={handleCalculate}
+            isLoading={isLoading}
             transportOptions={transportOptions}
             fuelOptions={fuelOptions}
-            carTypeOptions={carTypeOptions}
+            carSizeOptions={carSizeOptions}
+            motorcycleSizeOptions={motorcycleSizeOptions}
           />
 
         </div>
       </div>
+
+      {error && (
+        <div>
+          <h1>deu ruim</h1>
+        </div>
+      )}
 
       {showModal && (
         <ResultModal
@@ -104,7 +128,7 @@ export function CreateCalculation() {
           onClose={handleCloseModal}
           transportOptions={transportOptions}
           fuelOptions={fuelOptions}
-          carTypeOptions={carTypeOptions}
+          carTypeOptions={carSizeOptions}
         />
       )}
     </div>
