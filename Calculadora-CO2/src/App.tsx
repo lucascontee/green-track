@@ -18,7 +18,7 @@ function App() {
       <Route path="/" element={<MainLayout />}>
         
         <Route path="" element={<Home />} />
-        <Route path="calcular" element={<CreateCalculation />} />
+        <Route path="calculate" element={<CreateCalculation />} />
         <Route path="history" element={<HistoryPage />} />
         <Route path="goal" element={<GoalPage />} />
         <Route path="ranking" element={<RankingPage />} />

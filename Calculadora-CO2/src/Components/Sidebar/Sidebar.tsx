@@ -18,7 +18,7 @@ const menuItems = [
   {
     title: "Calcular emissão",
     icon: FaCalculator,
-    url: "calcular",
+    url: "calculate",
   },
   {
     title: "Histórico de viagens",

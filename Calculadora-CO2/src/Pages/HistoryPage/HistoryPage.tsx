@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { FaHistory, FaFilter, FaRegTrashAlt } from "react-icons/fa"
 import { getTravelHistory, deleteTravelById } from "../../Service/TravelService"
-import type { ITripHistory } from "../../Types/travel.types.ts"; // 4. Importe o tipo
+import type { ITripHistory } from "../../Types/travel.types.ts"; 
 
 import "./HistoryPage.css"
 
@@ -36,7 +36,6 @@ const [filterTransport, setFilterTransport] = useState("todos");
       const success = await deleteTravelById(id);
       
       if (success) {
-        // Remove a viagem do estado local para atualizar a UI
         setTrips(currentTrips => currentTrips.filter(trip => trip.id !== id));
       } else {
         setError("Não foi possível deletar a viagem.");
@@ -133,6 +132,7 @@ const [filterTransport, setFilterTransport] = useState("todos");
                   <option value="bicicleta">Bicicleta</option>
                   <option value="patinete elétrico">Patinete Elétrico</option>
                   <option value="avião">Avião</option>
+                  <option value="a pé">A pé</option>
                 </select>
               </div>
             </div>

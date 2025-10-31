@@ -1,16 +1,14 @@
 import { FaLeaf } from "react-icons/fa";
-// 1. Importe o tipo de dados
 import type { EmissionResult } from "../../Pages/CreateCalculation/CreateCalculation";
 
-// 2. Defina as props que o componente vai receber
 interface Option {
   value: string;
   label: string;
 }
 
 interface ResultCardProps {
-  result: EmissionResult | null; // O resultado do cálculo
-  onClose: () => void; // Função para fechar o modal
+  result: EmissionResult | null; 
+  onClose: () => void;
   transportOptions: Option[];
   fuelOptions: Option[];
   carTypeOptions: Option[];

@@ -3,12 +3,10 @@ import { useState, useEffect } from "react";
 import { FaCalendarAlt, FaRoute, FaCar } from "react-icons/fa";
 import { BiTrendingDown, BiTrendingUp } from "react-icons/bi";
 
-// 1. Importar o serviço e o tipo
 import { getTravelHistory } from "../../Service/TravelService";
 
 import "./WeeklyReport.css" 
 
-// 2. Definir uma interface para os dados processados
 interface IWeeklyData {
   totalEmission: number;
   totalDistance: number;
@@ -110,7 +108,6 @@ export function WeeklyReport() {
     fetchWeeklyReport();
   }, []);
 
-  // 6. Lidar com os estados de Loading e Erro
   if (isLoading) {
     return (
       <div className="container-fluid py-4 text-center">
@@ -245,7 +242,6 @@ export function WeeklyReport() {
             </div>
           </div>
 
-          {/* Info Section */}
           <div className="bg-eco-green-lighter border rounded p-4">
             <h6 className="mb-2">📊 Análise Semanal</h6>
             <p className="text-muted small mb-0">

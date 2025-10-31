@@ -7,7 +7,7 @@ export function HelpCard(){
 
     const navigate = useNavigate();
     const handleNavigateToHelp = () => {
-        navigate('/help'); // '/help' é a rota da sua página de ajuda
+        navigate('/help'); 
     };
 
     return(

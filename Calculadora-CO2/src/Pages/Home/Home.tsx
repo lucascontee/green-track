@@ -5,9 +5,9 @@ import { MoreEmissionCard } from '../../Components/MoreEmissionCard/MoreEmission
 import { InfoCard } from '../../Components/InfoCard/InfoCard';
 import { HelpCard } from '../../Components/HelpCard/HelpCard';
 
-// --- 2. Importar o serviço ---
 import { getTravelHistory } from '../../Service/TravelService';
-import type { ITripHistory } from '../../Types/travel.types';
+import { getGoal } from '../../Service/GoalService';
+
 
 export function Home() {
 
@@ -16,15 +16,19 @@ export function Home() {
   const [lastTrip, setLastTrip] = useState<any>(0);
   const [topVehicleName, setTopVehicleName] = useState<string>("")
   const [topVehicleEmission, setTopVehicleEmission] = useState<number>(0);
+  const [ monthlyGoal, setMonthlyGoal] = useState<number| null>(null);
+  const [thisMonthEmissions, setThisMonthEmissions] = useState<number>(0);
 
 
   useEffect(() => {
     const fetchAndSumEmissions = async () => {
       try {
 
-        const history: ITripHistory[] = await getTravelHistory();
+         const [history, goalResponse] = await Promise.all([
+          getTravelHistory(),
+          getGoal()
+        ]);
 
-        
         const sum = history.reduce((accumulator, trip) => {
           return accumulator + trip.emission;
         }, 0);
@@ -40,11 +44,30 @@ export function Home() {
         const [calcTopName, calcTopEmission] = Object.entries(emissionsByVehicle)
           .sort(([, a], [, b]) => b - a)[0] || ["Nenhum", 0];
 
+        const now = new Date();
+          const firstDayOfMonth = new Date(now.getFullYear(), now.getMonth(), 1);
+
+          const thisMonthHistory = history.filter(trip => {
+            const tripDate = new Date(trip.date);
+            return tripDate >= firstDayOfMonth && tripDate.getFullYear() === now.getFullYear();
+          });
+
+          const thisMonthSum = thisMonthHistory.reduce((accumulator, trip) => {
+            return accumulator + trip.emission;
+          }, 0);
+
         setTotalEmissions(sum);
         setTotalCleanTrips(zeroEmittedCount)
         setLastTrip(lastTripEmission)
         setTopVehicleName(calcTopName);
         setTopVehicleEmission(calcTopEmission);
+        setThisMonthEmissions(thisMonthSum)
+
+        if (goalResponse) {
+          setMonthlyGoal(goalResponse.monthlyEmissionGoalKg);
+        } else {
+          setMonthlyGoal(null);
+        }
 
       } catch (err: any) {
         console.error("Erro ao buscar total de emissões:", err);
@@ -59,7 +82,7 @@ export function Home() {
         <MainCard totalEmissions={totalEmissions} />
         <MoreEmissionCard transportMode={topVehicleName} emissions={topVehicleEmission} />
       </div>
-        <InfoCard cleanTripsCount={totalCleanTrips} lastTrip={lastTrip} />
+        <InfoCard cleanTripsCount={totalCleanTrips} lastTrip={lastTrip} monthlyGoal={monthlyGoal} totalEmitted={thisMonthEmissions}/>
         <HelpCard/>
     </div>
   )

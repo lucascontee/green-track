@@ -154,7 +154,6 @@ export function RankingPage() {
     <div className="container-fluid py-4">
       <div className="row justify-content-center">
         <div className="col-12 col-xl-10">
-          {/* Header */}
           <div className="mb-4">
             <p className="text-muted mb-0">
               Conheça os veículos ordenados do menor para o maior emissor de CO₂
@@ -175,7 +174,6 @@ export function RankingPage() {
                 </div>
               </div>
 
-              {/* Table - Desktop */}
               <div className="table-responsive d-none d-md-block">
                 <table className="table table-hover mb-0">
                   <thead className="bg-light">
@@ -216,7 +214,6 @@ export function RankingPage() {
                 </table>
               </div>
 
-              {/* Cards - Mobile */}
               <div className="d-md-none p-3">
                 {vehicles.map((vehicle, index) => (
                   <div
@@ -248,7 +245,6 @@ export function RankingPage() {
             </div>
           </div>
 
-          {/* Info Section */}
           <div className="mt-4 bg-eco-green-lighter border rounded p-4">
             <h6 className="mb-2">💡 Sobre os dados</h6>
             <p className="text-muted small mb-0">

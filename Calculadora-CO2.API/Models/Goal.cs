@@ -2,7 +2,7 @@
 
 namespace Calculadora_CO2.API.Models
 {
-    public class UserGoal
+    public class Goal
     {
         public int Id { get; set; }
 

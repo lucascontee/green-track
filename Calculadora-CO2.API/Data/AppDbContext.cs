@@ -11,7 +11,7 @@ public class AppDbContext : DbContext
     }
 
     public DbSet<Travel> Travels { get; set; }
-    public DbSet<UserGoal> UserGoals { get; set; }
+    public DbSet<Goal> UserGoals { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -27,7 +27,7 @@ public class AppDbContext : DbContext
             .ValueGeneratedOnAdd()
             .HasDefaultValueSql("GETDATE()");
 
-        modelBuilder.Entity<UserGoal>()
+        modelBuilder.Entity<Goal>()
             .Property(ug => ug.Id)
             .ValueGeneratedOnAdd();
     }

@@ -12,7 +12,7 @@ export function MainCard({ totalEmissions }: EmissionCardProps) {
             <p className="card-title mb-2">Total de Emissões</p>
             <div className="mb-4">
               <span className="h-1 text-eco-green" style={{ fontWeight: 700, lineHeight: 1 }}>
-                {totalEmissions.toFixed(1)}
+                {totalEmissions.toFixed(2)}
               </span>
               <span className="text-green-info ms-3">
                 kg CO₂e

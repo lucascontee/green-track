@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { FaCalculator } from "react-icons/fa";
-// Importe a interface correta do seu componente pai
 import type { CalculationData } from "../../Pages/CreateCalculation/CreateCalculation";
 import "./CalculateCard.css";
 
@@ -30,7 +29,7 @@ export function CalculateCard({
   const [transport, setTransport] = useState("");
   const [fuelType, setFuelType] = useState("");
   const [carType, setCarType] = useState("");
-  const [motorcycleSize, setMotorcycleSize] = useState(""); // <-- MUDANÇA: Novo estado para moto
+  const [motorcycleSize, setMotorcycleSize] = useState(""); 
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -155,7 +154,7 @@ export function CalculateCard({
                   id="carType"
                   value={carType}
                   onChange={(e) => setCarType(e.target.value)}
-                  required={transport === "carro"} // Só é obrigatório se for carro
+                  required={transport === "carro"} 
                 >
                   <option value="">Selecione o tipo do carro</option>
                   {carSizeOptions.map((option) => (
@@ -193,7 +192,6 @@ export function CalculateCard({
               <button
                 type="submit"
                 className=" w-25 btn btn-primary btn-lg d-flex align-items-center justify-content-center gap-2"
-                // disabled={isLoading} // <-- MUDANÇA: Use o prop isLoading aqui
               >
                 Calcular Emissão
               </button>
