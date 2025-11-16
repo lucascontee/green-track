@@ -19,3 +19,7 @@
 .bell{
   color: var(--eco-green) !important;
 }
+
+.green-bar{
+  background-color: var(--eco-green) !important;
+}

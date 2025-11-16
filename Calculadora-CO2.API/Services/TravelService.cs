@@ -137,6 +137,9 @@ namespace Calculadora_CO2.API.Services
                 case "onibus":
                     fatorEmissaoGramsKm = 32; 
                     break;
+                case "caminhão":
+                    fatorEmissaoGramsKm = 650;
+                    break;
                 case "aviao":
                     fatorEmissaoGramsKm = 123;
                     break;

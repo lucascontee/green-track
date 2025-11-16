@@ -22,6 +22,8 @@ export function InfoCard({ cleanTripsCount, lastTrip, monthlyGoal, totalEmitted 
       goalValue: monthlyGoal?.toFixed(2), 
       emittedValue: totalEmitted?.toFixed(2),
       emittedColor: "text-emitted",
+      emittedColorGreen: "text-emitted",
+      emittedColorRed: "text-danger",
       color: "text-eco-green"
     },
     {
@@ -45,6 +47,8 @@ export function InfoCard({ cleanTripsCount, lastTrip, monthlyGoal, totalEmitted 
     <div className="row mt-5">
       {stats.map((stat, index) => {
         const Icon = stat.icon;
+        const isOverGoal = monthlyGoal ? stat.goalValue! > monthlyGoal.toString() : false;
+
         return (
           <div key={index} className="col-12 col-md-4">
             <div className="card rounded-4 info-card h-100">
@@ -61,7 +65,7 @@ export function InfoCard({ cleanTripsCount, lastTrip, monthlyGoal, totalEmitted 
                     </p>
                     <p className="small mb-0">
                       <span className="text-muted-green">Emitido:</span>{' '}
-                      <span className={`fw-semibold ${stat.emittedColor}`}>{stat.emittedValue} kg CO₂e</span>
+                      <span className={`fw-semibold ${isOverGoal ? stat.emittedColorRed : stat.emittedColorGreen}`}>{stat.emittedValue} kg CO₂e</span>
                     </p>
                   </div>
                 ) : (

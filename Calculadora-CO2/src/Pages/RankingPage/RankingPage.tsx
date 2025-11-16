@@ -32,7 +32,7 @@ const vehicles: Vehicle[] = [
     id: 3,
     name: "Carro Leve",
     fuel: "Híbrido",
-    emissionFactor: 0.05,
+    emissionFactor: 27,
   },
   {
     id: 4,
@@ -130,6 +130,12 @@ const vehicles: Vehicle[] = [
     fuel: "Não aplica",
     emissionFactor: 0,
   },
+    {
+    id: 20,
+    name: "Caminhão",
+    fuel: "Diesel",
+    emissionFactor: 650,
+  },
   
 ].sort((a, b) => a.emissionFactor - b.emissionFactor);
 
@@ -201,7 +207,7 @@ export function RankingPage() {
                           <span className="fw-medium">{vehicle.name}</span>
                         </td>
                         <td className="py-3">
-                          <span className="text-muted">{vehicle.fuel}</span>
+                          <span className="">{vehicle.fuel}</span>
                         </td>
                         <td className="py-3 text-end px-4">
                           <span className="badge bg-eco-green-lighter text-eco-green px-3 py-2">

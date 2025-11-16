@@ -27,6 +27,7 @@ const transportOptions = [
   { value: "carro", label: "Carro" },
   { value: "moto", label: "Moto" },
   { value: "onibus", label: "Ônibus" },
+  { value: "caminhão", label: "Caminhão" },
   { value: "bicicleta", label: "Bicicleta" },
   { value: "bicicleta-eletrica", label: "Bicicleta Elétrica" },
   { value: "patinete", label: "Patinete Elétrico" },
@@ -42,15 +43,15 @@ const fuelOptions = [
 ];
 
 const carSizeOptions = [
-  { value: "pequeno", label: "Carro Pequeno" },
-  { value: "medio", label: "Carro Médio" },
-  { value: "grande", label: "Carro Grande" },
+  { value: "pequeno", label: "Carro Pequeno (ex: Kwid, Mobi, Celta, Onix 1.0)" },
+  { value: "medio", label: "Carro Médio (ex: HB20 1.6, Onix Turbo, Polo, Corolla)" },
+  { value: "grande", label: "Carro Grande (ex: SUVs como Creta, Compass, T-Cross)" },
 ];
 
 const motorcycleSizeOptions = [
-  { value: "pequena", label: "Moto Pequena" },
-  { value: "media", label: "Moto Média" },
-  { value: "grande", label: "Moto Grande" },
+  { value: "pequena", label: "Moto Pequena (Até 250cc)" },
+  { value: "media", label: "Moto Média (250-600cc)" },
+  { value: "grande", label: "Moto Grande (600cc+)"}
 ]
 
 export function CreateCalculation() {
