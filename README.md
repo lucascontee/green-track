@@ -30,3 +30,64 @@ Este projeto utiliza uma arquitetura moderna e robusta, separando claramente as 
 - TypeScript
 - Bootstrap 
 - CSS
+
+## ⚙️ Como Rodar o Projeto Localmente (Guia de Instalação)<br>
+Para rodar este projeto em modo de desenvolvimento, você precisará configurar o Backend (API) e o Frontend (React) separadamente.
+<br><br>
+Pré-requisitos
+- Node.js 
+- Visual Studio 2022 (Durante a instalação, marque "Desenvolvimento ASP.NET e Web".)
+- .NET SDK (Versão 8)
+- SQL Server Express 2022 (Banco de dados).
+- SSMS (SQL Server Management Studio) (Caso queira gerenciar o banco de dados).
+
+## Configuração do Backend (API .NET)
+
+Clone o repositório:
+
+git clone https://github.com/lucascontee/green-track.git
+
+
+
+Abra o Backend:
+
+1. Navegue até a pasta do backend (Calculadora_CO2.API).
+
+2. Abra o arquivo da solução (.sln) com o Visual Studio 2022.
+
+3. Configure o Banco de Dados (SQL Server):
+
+4. Este projeto espera uma conexão com um SQL Server. O erro error: 26 é comum se o servidor não for encontrado.
+
+5. Verifique se seu SQL Server Express está rodando:
+
+6. Pressione Win+R, digite services.msc.
+
+7. Garanta que os serviços SQL Server (ex: SQLEXPRESS01) e (SQL Server Browser) estejam "Em Execução".
+
+8. Habilite o TCP/IP -> Pressione Win+R, digite C:\Windows\SysWOW64\SQLServerManager16.msc (para SQL 2022) e pressione Enter.
+
+9. Vá para Configuração de Rede do SQL Server -> Protocolos para SUA_INSTANCIA.
+
+10. Clique com o botão direito em TCP/IP e selecione "Habilitar".
+
+11. Volte ao services.msc e reinicie o serviço SQL Server (SUA_INSTANCIA).
+
+12. Atualize a String de Conexão: Abra o arquivo appsettings.json na raiz do projeto da APIe modifique a variável ConnectionStrings no arquivo appsettings.Development.json <br>
+"ConnectionStrings": {
+  "DefaultConnection": "Server=SEU_COMPUTADOR\\SUA_INSTANCIA;Database=GreenTrackDB;Trusted_Connection=True;TrustServerCertificate=True;"
+}
+
+13. No Visual Studio, vá em Ferramentas -> Gerenciador de Pacotes do NuGet -> Console do Gerenciador de Pacotes. Execute o comando: "Update-Database" - para criar o banco de dados e suas tabelas
+
+14. Rode a API -> Pressione F5 (ou o botão "Play") no Visual Studio. A API deve iniciar (ex: https://localhost:7036). <br>
+
+## Configuração do Frontend (React)
+
+1. Navegue até a pasta do seu frontend (Calculadora_CO2).
+
+2. Instale as dependências com o comando "npm install" no console
+
+3. Rode o Cliente React: npm run dev
+
+Abra a Aplicação: O terminal mostrará o endereço local (ex: http://localhost:5173). Abra-o no seu navegador.
